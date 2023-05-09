@@ -2,7 +2,9 @@ import * as React from 'react';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import fondoskills from '../images/fondo-skills.jpg'
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 import htmllogo from '../images/html.png.png';
 import jslogo from '../images/javascript.png.png';
@@ -28,6 +30,11 @@ const skills = [
 
 
 export default function TitlebarImageList() {
+
+  useEffect(()=>{
+    Aos.init();
+},[])
+
   return (
     <Box sx={{
       display:'flex',
@@ -43,11 +50,11 @@ export default function TitlebarImageList() {
       padding: '50px 0',
       textAlign: 'center',
     }}>
-      <Typography variant='h2'>
+      <Typography variant='h2' data-aos='fade-right'>
         Skills
       </Typography>
       
-      <Box sx={{ 
+      <Box data-aos='fade-right' sx={{ 
         width: '50%', 
         height: 'auto',
         display:'flex',
