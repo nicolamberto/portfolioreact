@@ -1,0 +1,11 @@
+.animatedback{
+    background: linear-gradient( #0f186d, #205295, #144272, #0A2647 );
+    position: relative;
+    animation: cambiar 10s ease infinite;
+}
+
+@keyframes cambiar {
+    0%{background-position: 0 50%;}
+    50%{background-position: 100 50%;}
+    100%{background-position: 0 50%;}
+}
