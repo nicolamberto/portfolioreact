@@ -5,6 +5,7 @@ import ParticlesBackground from "./ParticlesBackground";
 import Aos from "aos";
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
+import fondo from '../images/projectpics/fondoabout.jpg';
 
 
 export default function AboutMe(){
@@ -37,7 +38,7 @@ export default function AboutMe(){
                 borderRadius:3,                
                 width:'100%',
                 height:'100%',
-                background: 'rgba(255, 255, 255, 0.2)',
+                background: 'rgba(255, 255, 255, 0)',
                 backdropFilter:'blur(1px)'
             }}
             >

@@ -22,6 +22,7 @@ import rickandmortyapi from '../images/projectpics/rickandmortyapi.png';
 import tasklist from '../images/projectpics/tasklist.png';
 import weatherreact from '../images/projectpics/weatherreact.png';
 import weather from '../images/projectpics/weather.png';
+import fondo from '../images/projectpics/fondoprojects.jpg';
 
 
 
@@ -53,7 +54,9 @@ export default function Projects() {
       flexDirection:'column',
       justifyContent:'center',
       alignItems:'center',
-      background: 'linear-gradient( #AFD3E2, #19A7CE, #146C94 )',
+      background: `linear-gradient(#2C74B3, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(${fondo});`,
+      backgroundRepeat:'no-repeat',
+            backgroundSize:'cover',
     }}>
       <Typography data-aos='fade-left' variant='h2' sx={{p:10, color:'white'}}>Projects</Typography>
       <Box component={'div'} className='' sx={{
@@ -61,7 +64,6 @@ export default function Projects() {
       gridTemplateColumns:'1fr 1fr 1fr',
       gap:5,
       height:'auto',
-      border:'1px solid red',
       
       p:''
     }}>
