@@ -5,6 +5,7 @@ import fondoskills from '../images/fondo-skills.jpg'
 import Aos from "aos";
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
+import {motion} from 'framer-motion'
 
 import htmllogo from '../images/html.png.png';
 import jslogo from '../images/javascript.png.png';
@@ -15,7 +16,7 @@ import reactlogo from '../images/react.png.png';
 import sasslogo from '../images/sass.png.png';
 import csslogo from '../images/css.png.png';
 import { Box, Typography } from '@mui/material';
-import ParticlesBackground from './ParticlesBackground';
+
 
 const skills = [
   {name:'HTML' ,image: htmllogo},
@@ -64,22 +65,26 @@ export default function TitlebarImageList() {
         }}>
         
         {skills.map((item) => (
-          <ImageListItem key={item.name} 
-          sx={{
-            height:'90px'
-          }}
+          <Box 
+          key={item.name} 
+          
           >
-            <img
+            <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.9}}>
+              <Box 
+              sx={{cursor:'pointer'}}
+              component={'img'}
               src={`${item.image}`}
               alt={item.title}
               loading="lazy"
               style={{width:'80px', height:'auto'}}
-            />
-            <ImageListItemBar
-              title={item.name}
-              sx={{height:'30px', display:'none'}}
-            />
-          </ImageListItem>
+              />
+              <Typography variant='p' sx={{display:'none'}}>{item.name}</Typography>
+            </motion.div>
+            
+              
+              
+            
+          </Box>
         ))}
       </Box>
     </Box>

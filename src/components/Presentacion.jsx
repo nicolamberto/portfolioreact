@@ -1,8 +1,7 @@
 import { Box, Button, Typography, } from "@mui/material";
 import fondo from '../images/fondo-inicio.jpg'
-import Wave from "react-wavify";
-import computer from '../images/computer.png';
-import ParticlesBackground from "./ParticlesBackground";
+import { Typewriter } from 'react-simple-typewriter'
+
 
 
 
@@ -31,7 +30,19 @@ export default function Presentacion (){
             }}>
                 
                 <Typography variant="h2">Welcome. </Typography>
-                <Typography sx={{display:'flex', flexDirection:'row'}} variant="h3">I am <Typography variant="h3" color={'#DBDFEA'}> . Frontend developer</Typography>.</Typography>
+                <Typography variant="h3">I am 
+                <Typography variant="span" sx={{color:'#5C469C'}}>
+                <Typewriter 
+                words={[' Software developer']}
+                loop={false}
+                cursor
+                cursorStyle='_'
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+                />   
+                </Typography>
+                </Typography>
                 <Button variant="contained">Go to portfolio. </Button>
                 
             </Box>

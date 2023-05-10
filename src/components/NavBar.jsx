@@ -30,7 +30,7 @@ export default function NavBar(){
     return(
         <AppBar>
 
-            <Toolbar sx={{diaplsy: 'flex', justifyContent: 'space-between'}}>
+            <Toolbar sx={{display: 'flex', justifyContent: 'space-between'}}>
                 <Box sx={{display: 'flex', alignItems: 'center'}}>
                     <IconButton 
                     color="inherit" 
@@ -38,23 +38,25 @@ export default function NavBar(){
                     sx={{display: {xs:'block', sm:'block', md: 'none'}}}> 
                     <MenuOpenIcon/>
                     </IconButton>
-                    <motion.h2 initial={{x:-100}} animate={{x:0}}>NL</motion.h2>
+                    <motion.h2 initial={{x:-100}} animate={{x:0}} transition={{duration:0.5}}>NL</motion.h2>
                 </Box>
 
                 <motion.div
                 initial={{scale:0}}
-                transition={{duration:0.3}}
+                transition={{duration:0.5}}
                 animate={{scale:1}}
                 >
                     <Box sx={{display:{xs:'none', sm:'none', md:'flex'}, gap:3}}>
                         {
                             navLinks.map(item =>(
+                                <a style={{textDecoration:'none', color:'white'}} href={item.path}>
                                 <Button 
                                 color="inherit" 
                                 key={item.title}
-                                component='a'
-                                href={item.path}
+                                component={motion.div} whileHover={{scale:1.1}} whileTap={{scale:0.9}}
                                 >{item.title}</Button>
+                                </a>
+                                
                                 ))
                         }
                     </Box>
@@ -63,12 +65,16 @@ export default function NavBar(){
                 <motion.div
                 initial={{x:100}}
                 animate={{x:0}}
+                transition={{duration:0.5}}
                 >
-                    <Box sx={{padding:2.5}}>
-                        <IconButton color="inherit"><WhatsAppIcon/></IconButton>
-                        <IconButton color="inherit"><InstagramIcon/></IconButton>
-                        <IconButton color="inherit"><LinkedInIcon/></IconButton>
-                        <IconButton color="inherit"><GitHubIcon/></IconButton>
+                    <Box sx={{padding:0}}>
+                        
+                            <IconButton component={motion.div} whileHover={{scale:1.3}} whileTap={{scale:0.9}} color="inherit"><WhatsAppIcon/></IconButton>
+                            <IconButton component={motion.div} whileHover={{scale:1.3}} whileTap={{scale:0.9}} color="inherit"><InstagramIcon/></IconButton>
+                            <IconButton component={motion.div} whileHover={{scale:1.3}} whileTap={{scale:0.9}} color="inherit"><LinkedInIcon/></IconButton>
+                            <IconButton component={motion.div} whileHover={{scale:1.3}} whileTap={{scale:0.9}} color="inherit"><GitHubIcon/></IconButton>
+                        
+                        
                     </Box>
                 </motion.div>
                 

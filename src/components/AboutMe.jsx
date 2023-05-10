@@ -5,7 +5,7 @@ import ParticlesBackground from "./ParticlesBackground";
 import Aos from "aos";
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
-import fondo from '../images/projectpics/fondoabout.jpg';
+import { motion } from "framer-motion";
 
 
 export default function AboutMe(){
@@ -43,15 +43,17 @@ export default function AboutMe(){
             }}
             >
                 <ParticlesBackground/>
-                <Box data-aos='fade-right'>
-            
-
-                    <Typography variant="img" component={'img'} src={profileimage}
-                sx={{
+                <Box data-aos='fade-right'
+                
+                
+                >
+                    <Typography variant="img" component={'img'} 
+                    src={profileimage}
+                    sx={{
                     maxWidth:280,
                     ml:5,
                     borderRadius:50
-                }}
+                    }}
                     ></Typography>
                 </Box>
                 <Box

@@ -10,6 +10,7 @@ import { Box } from '@mui/material';
 import Aos from "aos";
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
+import { motion } from 'framer-motion';
 
 import furnimark from '../images/projectpics/furnimark.png';
 import calculator from '../images/projectpics/calculator.png';
@@ -69,12 +70,16 @@ export default function Projects() {
     }}>
       
       {projects.map((item) => (
-        <Card data-aos="fade-left" sx={{ 
-          width: 265,
-          height:300,
-          boxShadow:'-1px 1px 30px 0px',
-          cursor:'pointer'
-          }}>
+        <Card data-aos="fade-left" 
+          sx={{ 
+            width: 265,
+            height:300,
+            boxShadow:'-1px 1px 30px 0px',
+            cursor:'pointer'
+          }}
+          component={motion.div}
+          whileHover={{scale:1.1}} whileTap={{scale:0.9}}
+          >
             
           <CardMedia
             component="img"
