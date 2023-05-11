@@ -28,17 +28,17 @@ import fondo from '../images/projectpics/fondoprojects.jpg';
 
 
 const projects = [
-  {name:'Furnimark', tecs:'HTML/CSS', image: furnimark},
-  {name:'Calculator', tecs:'HTML/CSS/JS', image: calculator},
-  {name:'Movies API', tecs:'HTML/CSS/JS', image: moviesapi},
-  {name:'Old Portfolio', tecs:'HTML/CSS/JS', image: oldportfolio},
-  {name:'Photopathy', tecs:'HTML/CSS/JS', image: photopaty},
-  {name:'Portfolio React JS', tecs:'React JS', image: portfolioreact},
-  {name:'Random User', tecs:'React JS', image: randomuser},
-  {name:'Rick and Morty API', tecs:'HTML/CSS/JS', image: rickandmortyapi},
-  {name:'Tasklist', tecs:'React JS', image: tasklist},
-  {name:'Weather API React', tecs:'React JS', image: weatherreact},
-  {name:'Weather API', tecs:'HTML/CSS/JS', image: weather},
+  {name:'Furnimark', tecs:'HTML/CSS', image: furnimark, gh:'https://github.com/nicolamberto/furnimark', pf:'https://furnimark.vercel.app/'},
+  {name:'Calculator', tecs:'HTML/CSS/JS', image: calculator, gh:'https://github.com/nicolamberto/calculadora', pf:'https://calculadora-inky-mu.vercel.app/'},
+  {name:'Movies API', tecs:'HTML/CSS/JS', image: moviesapi, gh:'https://github.com/nicolamberto/moviesapi', pf:'https://moviesapi-liart.vercel.app/'},
+  {name:'Old Portfolio', tecs:'HTML/CSS/JS', image: oldportfolio, gh:'https://github.com/nicolamberto/portfolio', pf:'https://portfolio-five-beta-69.vercel.app/'},
+  {name:'Photopathy', tecs:'HTML/CSS/JS', image: photopaty, gh:'https://github.com/nicolamberto/photopathy', pf:'https://photopathy.vercel.app/'},
+  {name:'Portfolio React JS', tecs:'React JS', image: portfolioreact, gh:'https://github.com/nicolamberto/portfolioreact', pf:'https://portfolioreact-flame.vercel.app/'},
+  {name:'Random User', tecs:'React JS', image: randomuser, gh:'https://github.com/nicolamberto/randomuser', pf:'https://randomuser-five.vercel.app/'},
+  {name:'Rick and Morty API', tecs:'HTML/CSS/JS', image: rickandmortyapi, gh:'https://github.com/nicolamberto/rickandmortyapi', pf:'https://rickandmortyapi-wine.vercel.app/'},
+  {name:'Tasklist', tecs:'React JS', image: tasklist, gh:'https://github.com/nicolamberto/tasklist', pf:'https://tasklist-dun.vercel.app/'},
+  {name:'Weather API React', tecs:'React JS', image: weatherreact, gh:'https://github.com/nicolamberto/weatherapireact', pf:'https://weatherapireact.vercel.app/'},
+  {name:'Weather API', tecs:'HTML/CSS/JS', image: weather, gh:'https://github.com/nicolamberto/clima', pf:'https://clima-tawny.vercel.app/'},
   
 ]
 
@@ -59,10 +59,10 @@ export default function Projects() {
       backgroundRepeat:'no-repeat',
             backgroundSize:'cover',
     }}>
-      <Typography data-aos='fade-left' variant='h2' sx={{p:10, color:'white'}}>Projects</Typography>
+      <Typography data-aos='fade-left' variant='h2' sx={{p:{xs:5, sm:7, md:10}, fontSize:{xs:40, sm:45, md:60}, color:'white'}}>Projects</Typography>
       <Box component={'div'} className='' sx={{
       display:'grid',
-      gridTemplateColumns:'1fr 1fr 1fr',
+      gridTemplateColumns:{xs:'1fr', sm:'1fr 1fr', md:'1fr 1fr 1fr'},
       gap:5,
       height:'auto',
       
@@ -72,7 +72,7 @@ export default function Projects() {
       {projects.map((item) => (
         <Card data-aos="fade-left" 
           sx={{ 
-            width: 265,
+            width: 258,
             height:300,
             boxShadow:'-1px 1px 30px 0px',
             cursor:'pointer'
@@ -97,8 +97,8 @@ export default function Projects() {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">github</Button>
-            <Button size="small">deployment</Button>
+            <Button size="small"><a style={{textDecoration:'none', color:'inherit'}} target="_blank" href={item.gh}> github</a></Button>
+            <Button size="small"><a style={{textDecoration:'none', color:'inherit'}} target="_blank" href={item.pf}> deployment</a></Button>
           </CardActions>
         </Card>  
               ))}

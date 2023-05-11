@@ -69,10 +69,10 @@ export default function NavBar(){
                 >
                     <Box sx={{padding:0}}>
                         
-                            <IconButton component={motion.div} whileHover={{scale:1.3}} whileTap={{scale:0.9}} color="inherit"><WhatsAppIcon/></IconButton>
-                            <IconButton component={motion.div} whileHover={{scale:1.3}} whileTap={{scale:0.9}} color="inherit"><InstagramIcon/></IconButton>
-                            <IconButton component={motion.div} whileHover={{scale:1.3}} whileTap={{scale:0.9}} color="inherit"><LinkedInIcon/></IconButton>
-                            <IconButton component={motion.div} whileHover={{scale:1.3}} whileTap={{scale:0.9}} color="inherit"><GitHubIcon/></IconButton>
+                            <IconButton  component={motion.div} whileHover={{scale:1.3}} whileTap={{scale:0.9}} color="inherit"><a style={{textDecoration:'none', color:'white'}} target="_blank" href="https://api.whatsapp.com/send?phone=5493512642805&text=Hi!%20I%20saw%20your%20portfolio%20and%20I%27m%20interested%20in%20getting%20in%20touch%20with%20you."><WhatsAppIcon/></a></IconButton>
+                            <IconButton component={motion.div} whileHover={{scale:1.3}} whileTap={{scale:0.9}} color="inherit"><a style={{textDecoration:'none', color:'white'}} target="_blank" href="https://www.instagram.com/nicolamberto_/"><InstagramIcon/></a> </IconButton>
+                            <IconButton component={motion.div} whileHover={{scale:1.3}} whileTap={{scale:0.9}} color="inherit"><a style={{textDecoration:'none', color:'white'}} target="_blank" href="https://www.linkedin.com/in/nicolas-lamberto-a1b588182/"><LinkedInIcon/></a> </IconButton>
+                            <IconButton component={motion.div} whileHover={{scale:1.3}} whileTap={{scale:0.9}} color="inherit"><a style={{textDecoration:'none', color:'white'}} target="_blank" href="https://github.com/nicolamberto"><GitHubIcon/></a> </IconButton>
                         
                         
                     </Box>

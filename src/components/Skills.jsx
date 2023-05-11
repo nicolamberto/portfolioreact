@@ -48,10 +48,10 @@ export default function TitlebarImageList() {
       backgroundSize: 'cover',
       color: '#fff',
       backgroundPosition: 'center center',
-      padding: '50px 0',
+      padding: {xs:5, sm:8, md:10},
       textAlign: 'center',
     }}>
-      <Typography variant='h2' data-aos='fade-right'>
+      <Typography sx={{fontSize:{xs:40, sm:45, md:60}}} variant='h2' data-aos='fade-right'>
         Skills
       </Typography>
       
@@ -71,12 +71,16 @@ export default function TitlebarImageList() {
           >
             <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.9}}>
               <Box 
-              sx={{cursor:'pointer'}}
+              sx={{
+                cursor:'pointer',
+                width:{lg:80, md:75, sm:58, xs:40}, 
+                height:'auto'
+              }}
               component={'img'}
               src={`${item.image}`}
               alt={item.title}
               loading="lazy"
-              style={{width:'80px', height:'auto'}}
+              
               />
               <Typography variant='p' sx={{display:'none'}}>{item.name}</Typography>
             </motion.div>
