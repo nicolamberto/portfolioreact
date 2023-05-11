@@ -51,14 +51,15 @@ export default function TitlebarImageList() {
       padding: {xs:5, sm:8, md:10},
       textAlign: 'center',
     }}>
-      <Typography sx={{fontSize:{xs:40, sm:45, md:60}}} variant='h2' data-aos='fade-right'>
+      <Typography sx={{fontSize:{xs:40, sm:45, md:60}, pb:{xs:3, sm:2}}} variant='h2' data-aos='fade-right'>
         Skills
       </Typography>
       
       <Box data-aos='fade-right' sx={{ 
         width: '50%', 
         height: 'auto',
-        display:'flex',
+        display:{xs:'grid', sm:'flex'},
+        gridTemplateColumns:'1fr 1fr 1fr 1fr',
         justifyContent:'center',
         alignItems:'center',
         gap: 2,
@@ -73,7 +74,7 @@ export default function TitlebarImageList() {
               <Box 
               sx={{
                 cursor:'pointer',
-                width:{lg:80, md:75, sm:58, xs:40}, 
+                width:{lg:80, md:75, sm:58, xs:50}, 
                 height:'auto'
               }}
               component={'img'}
