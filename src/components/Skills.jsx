@@ -37,7 +37,7 @@ export default function TitlebarImageList() {
 },[])
 
   return (
-    <Box sx={{
+    <Box component={'div'} id='skills' sx={{
       display:'flex',
       justifyContent:'center',
       flexDirection:'column',

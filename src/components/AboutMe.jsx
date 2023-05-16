@@ -28,11 +28,13 @@ export default function AboutMe(){
             }}
             
         >
-            <Box
+            <Box id="aboutme"
             component={'div'}
             sx={{
                 display:'flex',
                 flexDirection:{xs:'column', sm:'column', md:'row'},
+                mb:{xs:0, sm:0},
+                mt:{xs:0, sm:0},
                 justifyContent:'center',
                 alignItems:'center',
                 gap:2,
@@ -76,9 +78,9 @@ export default function AboutMe(){
                         pr:3
                     }}
                 >
-                    <Typography sx={{fontSize:{xs:25, sm:30, md:35}}} variant="h3">Hi, I`m  <Typography sx={{color:'#1D267D'}} variant="span">Nicolas Lamberto</Typography></Typography>
-                    <Typography sx={{fontSize:{xs:20, sm:20, md:25, lg:30}}} variant="h5">Frontend Developer.</Typography>
-                    <Typography sx={{fontSize:{xs:15, sm:15, md:15, lg:17}}} variant="p">My passion is web development and I have learned to use the front-end technology React to create dynamic and interactive user interfaces. I feel very comfortable working in a team and enjoy facing new challenges to improve my skills. I like to stay up-to-date on the latest trends and technologies in the programming world, and I am eager to continue learning and growing in my career. </Typography>
+                    <Typography sx={{fontSize:{xs:20, sm:30, md:35}}} variant="h3">Hi, I`m  <Typography sx={{color:'#1D267D'}} variant="span">Nicolas Lamberto</Typography></Typography>
+                    <Typography sx={{fontSize:{xs:17, sm:20, md:25, lg:30}}} variant="h5">Frontend Developer.</Typography>
+                    <Typography sx={{fontSize:{xs:14, sm:15, md:15, lg:17}}} variant="p">My passion is web development and I have learned to use the front-end technology React to create dynamic and interactive user interfaces. I feel very comfortable working in a team and enjoy facing new challenges to improve my skills. I like to stay up-to-date on the latest trends and technologies in the programming world, and I am eager to continue learning and growing in my career. </Typography>
 
                     <div>
                         <Button>DOWNLOAD RESUME <DownloadIcon/> </Button>

@@ -50,27 +50,26 @@ export default function Projects() {
 
   return (
 
-    <Box sx={{
+    <Box component={'div'} id='projects' sx={{
       display:'flex',
       flexDirection:'column',
       justifyContent:'center',
       alignItems:'center',
       background: `linear-gradient(#2C74B3, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(${fondo});`,
       backgroundRepeat:'no-repeat',
-            backgroundSize:'cover',
+      backgroundSize:'cover',
     }}>
-      <Typography data-aos='fade-left' variant='h2' sx={{p:{xs:5, sm:7, md:10}, fontSize:{xs:40, sm:45, md:60}, color:'white'}}>Projects</Typography>
+      <Typography variant='h2' sx={{p:{xs:5, sm:7, md:10}, fontSize:{xs:40, sm:45, md:60}, color:'white'}}>Projects</Typography>
       <Box component={'div'} className='' sx={{
       display:'grid',
       gridTemplateColumns:{xs:'1fr', sm:'1fr 1fr', md:'1fr 1fr 1fr'},
       gap:5,
       height:'auto',
-      
-      p:''
+      pb:5
     }}>
       
       {projects.map((item) => (
-        <Card data-aos="fade-left" 
+        <Card data-aos="fade-up" 
           sx={{ 
             width: 258,
             height:300,

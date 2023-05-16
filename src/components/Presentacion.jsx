@@ -31,7 +31,7 @@ export default function Presentacion (){
                 
                 <Typography sx={{fontSize:{xs:35, sm:50, md:60}}} variant="h2">Welcome. </Typography>
                 <Typography sx={{fontSize:{xs:30, sm:50, md:60}}} variant="h3">I am 
-                <Typography sx={{fontSize:{xs:35, sm:50, md:60}, color:'#5C469C'}} variant="span">
+                <Typography sx={{fontSize:{xs:30, sm:50, md:60}, color:'#5C469C'}} variant="span">
                 <Typewriter 
                 words={[' Software developer']}
                 loop={false}
@@ -43,7 +43,7 @@ export default function Presentacion (){
                 />   
                 </Typography>
                 </Typography>
-                <Button variant="contained">Go to portfolio. </Button>
+                <Button variant="contained" component={'a'} href="#projects">Go to portfolio. </Button>
                 
             </Box>
             
