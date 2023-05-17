@@ -1,11 +1,13 @@
 import { Box, Typography, Button } from "@mui/material";
 import DownloadIcon from '@mui/icons-material/Download';
 import profileimage from '../images/fotoportfolio.jpg'
+import secondprofileimg from '../images/secondpic.jpg';
 import ParticlesBackground from "./ParticlesBackground";
 import Aos from "aos";
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import resume from '../resume/resume.pdf';
 
 
 export default function AboutMe(){
@@ -83,7 +85,7 @@ export default function AboutMe(){
                     <Typography sx={{fontSize:{xs:14, sm:15, md:15, lg:17}}} variant="p">My passion is web development and I have learned to use the front-end technology React to create dynamic and interactive user interfaces. I feel very comfortable working in a team and enjoy facing new challenges to improve my skills. I like to stay up-to-date on the latest trends and technologies in the programming world, and I am eager to continue learning and growing in my career. </Typography>
 
                     <div>
-                        <Button>DOWNLOAD RESUME <DownloadIcon/> </Button>
+                        <Button component={'a'} href={resume} download={'resume-lamberto'}>DOWNLOAD RESUME <DownloadIcon/> </Button>
                     </div>
                     
                 </Box>
