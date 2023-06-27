@@ -24,10 +24,16 @@ import tasklist from '../images/projectpics/tasklist.png';
 import weatherreact from '../images/projectpics/weatherreact.png';
 import weather from '../images/projectpics/weather.png';
 import fondo from '../images/projectpics/fondoprojects.jpg';
+import ecommercereact from '../images/projectpics/ecommercereact.png';
+import tateti from '../images/projectpics/tateti.png';
+import openai from '../images/projectpics/openai.png';
 
 
 
 const projects = [
+  {name:'React Ecommerce', tecs:'React JS / In developement', image: ecommercereact, gh:'https://github.com/nicolamberto/eccomercenewreact'},
+  {name:'Tic Tac Toe', tecs:'React JS', image: tateti, gh:'https://github.com/nicolamberto/tic-tac-toe', pf:'https://tic-tac-toe-virid-ten.vercel.app/'},
+  {name:'Open AI', tecs:'React JS', image: openai, gh:'https://github.com/nicolamberto/chatgptapi'},
   {name:'Furnimark', tecs:'HTML/CSS', image: furnimark, gh:'https://github.com/nicolamberto/furnimark', pf:'https://furnimark.vercel.app/'},
   {name:'Calculator', tecs:'HTML/CSS/JS', image: calculator, gh:'https://github.com/nicolamberto/calculadora', pf:'https://calculadora-inky-mu.vercel.app/'},
   {name:'Movies API', tecs:'HTML/CSS/JS', image: moviesapi, gh:'https://github.com/nicolamberto/moviesapi', pf:'https://moviesapi-liart.vercel.app/'},
